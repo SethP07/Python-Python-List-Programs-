@@ -1,0 +1,30 @@
+### Max & Min from a List ###
+
+item=[8,6,4,7,9,5]
+
+max1=item[0]
+min1=item[0]
+
+
+def max_num():
+    global max1
+    for i in item:
+        if (i > max1):
+            max1=i
+    print ("Largest number is ",max1)
+    print (max1)
+
+
+
+def min_num():
+    global min1
+    for i in item:
+        if (i < min1):
+            min1=i
+    print ("Smallest number is ",min1)
+    print (min1)
+
+
+
+max_num()
+min_num()
