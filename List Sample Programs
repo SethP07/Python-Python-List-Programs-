@@ -1,0 +1,264 @@
+
+### Remove Duplicates from List ###
+
+l1=[1,2,3,7,2,1,5,6,4,8,5,4]
+s=set(l1)
+
+print (s)
+
+"""
+
+"""
+
+### Check for an Empty List ###
+
+l1=[34,45,6,5,4,56,7]
+l2=[]
+if not l1:
+    print ("l1 is empty")
+else:
+    print ("l1 is not empty")
+
+
+if not l2:
+    print ("l2 is empty")
+else:
+    print ("l2 is not empty")
+
+
+"""
+
+"""
+### Check for Clonning a List ###
+
+old_list=[2,4,5,7,8]
+new_list=list(old_list)
+
+print ("Old List is :", old_list)
+print ("New List is :", new_list)
+
+
+"""
+
+"""
+
+### Check for Words which have length higher than n ###
+
+n=4
+list_4=[]
+
+str="Seth is a great Guy and he deserves a fifty lacs plus package"
+
+for i in str.split(" "):
+    if len(i) > n:
+        list_4.append(i)
+
+print ("Words greater than 4 are ", list_4)
+        
+
+"""
+
+
+
+
+"""
+
+### Check for common between 2 lists ###
+
+
+list_1=[1,2,3,4,5]
+list_2=[5,6,3,8,9]
+
+list_3=[]
+
+
+for i in list_1:
+    for j in list_2:
+        if (i==j):
+            list_3.append(i)
+            break
+        
+print ("Common between lists are ", list_3)
+
+"""
+
+
+"""
+
+### Removing the 0th, 4th and 5th elements ###
+
+list_1=["Cat", "Dog", "Elephant", "Fox", "Tiger", "Lion", "Ponda"]
+
+for i,j in enumerate(list_1):
+    if i in (0,4,5):
+        list_1.pop(i)
+
+print (list_1)
+
+
+"""
+
+"""
+### Check for the numbers which are not Even ###
+list_num=[7,32,81,20,25,14,23,27]
+
+for i in list_num:
+    if (i%2 == 0):
+        list_num.remove(i)
+
+print ("List without Even Numbers ",list_num)
+
+"""
+
+"""
+
+### Shuffle a List ###
+
+from random import shuffle 
+list_1=["Cat", "Dog", "Elephant", "Fox", "Tiger", "Lion", "Ponda"]
+
+for i in range(1,10):
+    shuffle(list_1)
+    print (list_1)
+
+
+
+"""
+
+
+"""
+
+### generate all permutations of a list in Python ###
+
+import itertools
+print (list(itertools.permutations([1,2,3])))
+
+"""
+
+
+"""
+
+###Python program to convert a list of characters into a string###
+
+list_1=['T','u','t','o','r',' ','J','o','e','s']
+
+#s=list_1.join(",")
+
+s=''.join(list_1)
+
+print (s)
+
+
+"""
+
+"""
+
+list_1=[20, 70, 30, 90, 10, 30, 90, 10, 80]
+
+for i,j in enumerate(list_1):
+    if (j==30):
+        print (j, "has the Index ",i)
+
+
+"""
+
+"""
+###Append a list to another list###
+
+Number = [10, 20, 30, 40]
+animal = ["Cat", "Dog", "Lion", "Ponda"]
+
+l1=[]
+
+l1=Number + animal
+
+print (l1)
+
+"""
+
+"""
+###Find the second largest number in the list###
+
+x=[2,4,56,78,4,34,5,8,9]
+max1=x[0]
+
+for i in x:
+    if (i > max1):
+        max1=i
+
+x.remove(max1)
+
+max2=x[0]
+for i in x:
+    if (i > max2):
+        max2=i
+
+print ("Second largest is ",max2)
+    
+    
+print (x.sort())
+
+
+"""
+
+"""
+
+###Python program to get the frequency of the elements in a list.###
+
+import collections 
+dict1={}
+list_1=[10, 30, 50, 10, 20, 60, 20, 60, 40, 40, 50, 50, 30]
+
+for i in list_1:
+    j=i+1
+    count=0
+    for j in list_1:
+        if (i==j):
+            count =count+1
+            dict1[i]=count
+            
+print (dict1)
+
+f=collections.Counter(list_1)
+print (f)
+
+"""
+
+        
+
+"""
+
+ini_string = "123()#$ABGFDabcjw"
+for i in ini_string:
+    if i.isalpha():
+        print (i,end="")
+        res1 = "*".join([res1, i])
+
+print (res1)
+        
+
+"""
+
+"""
+
+import re
+
+str="MySelf , Samrat & Soumen had Drinks on 14th Sep 2023"
+
+d=re.findall("\d",str)
+
+print (d)
+
+
+
+
+import re
+
+str="MySelf , Samrat & Soumen had Drinks on 14th Sep 2023"
+
+d=re.findall("\d+",str)
+
+print (d)
+
+
+"""
