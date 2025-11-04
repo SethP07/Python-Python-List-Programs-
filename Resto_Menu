@@ -1,0 +1,40 @@
+Resto_Menu={
+            "Chicken_Pizza": 750,
+            "Paneer_Pizza":650,
+            "Pasta_white_sauce":400,
+            "Pasta_red_sauce":350,
+            "Burger":150 
+    
+}
+
+Order_Menu={1:"Chicken_Pizza",
+            2:"Paneer_Pizza",
+            3:"Pasta_white_sauce",
+            4:"Pasta_red_sauce",
+            5:"Burger"
+}
+    
+
+
+print ("*******Welcome to my Italian Restaurant******")
+order = 0
+#item=[]
+
+Cx=input("Do you wanna order something || : ")
+
+while( Cx == "Yes" or Cx =="Y"):
+    item=(input("Enter Item : "))
+    number_of_item = int(input("Enter the number of items : "))
+    if item in Resto_Menu:
+        print (item ,"is available")
+        order += number_of_item * Resto_Menu[item] 
+    else:
+        print ("Sorry", item, "not available")
+    print ("Do you wanna order anything else ?")
+    Cx=input()
+    if Cx == "Yes" or Cx =="Y":
+        continue
+    else:
+        break
+    
+print ("Total order is ",order)
